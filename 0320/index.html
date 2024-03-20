@@ -7,6 +7,7 @@
     <style>
         body{
             background-color: lightyellow;
+
         }
         .bgcolor--blue{
             background-color: lightblue;
@@ -38,7 +39,16 @@
     <script>
         const btnToggle = document.querySelector('.btn_toggle');
         /* addEventListner('이벤트',실행함수) */
-        btnToggle.addEventListener('click',function(){})
+        btnToggle.addEventListener('click',function(){document.body.classList.toggle('bgcolor--blue');});
+        
+        const btnReset = document.querySelector('.btn_reset');
+        btnReset.addEventListener('click', function(){
+            document.body.classList.remove('bgcolor--blue');
+            document.body.classList.remove('bgcolor--gray');});
+
+        const btnBgGray = document.querySelector('.btn_bggray');
+        btnBgGray.addEventListener('click', function(){document.body.classList.add('bgcolor--gray');});
+        
     </script>
 </body>
 </html>
